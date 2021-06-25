@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Text, View, FlatList } from 'react-native';
+import { ScrollView, Text, View, FlatList, SafeAreaView } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
@@ -28,16 +28,16 @@ const AlbumList = ({navigation}) =>{
   );
 
   if (!photoset) {
-    return <Text>Loading...</Text>;
+    return <Text>Cargando...</Text>;
   }
 
   return (
-    <View style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       <FlatList 
         data={photoset} 
         renderItem={renderItem}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 

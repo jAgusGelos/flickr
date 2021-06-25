@@ -7,7 +7,7 @@ import Button from './Button';
 const AlbumDetail = ({navigation, title, albumId}) => {
   const {
     headerContentStyle,
-
+    btnStyle,
     headerTextStyle,
     imageStyle,
   } = styles;
@@ -21,9 +21,9 @@ const AlbumDetail = ({navigation, title, albumId}) => {
       </CardSection>
 
       <CardSection>
-        <Button
+        <Button 
           onPress={() => navigation.navigate('photoList', {albumId: albumId})}>
-          See Now!
+          Ver más!
         </Button>
       </CardSection>
     </Card>
@@ -34,6 +34,7 @@ const styles = {
   headerContentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around',
+    
   },
   headerTextStyle: {
     fontSize: 18,
@@ -52,7 +53,7 @@ const styles = {
     height: 300,
     flex: 1,
     width: null,
-  },
+  }
 };
 
 export default AlbumDetail;
